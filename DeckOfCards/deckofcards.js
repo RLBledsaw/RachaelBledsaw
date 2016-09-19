@@ -61,15 +61,17 @@ function buildDeck(){
 function Player(name){
 	this.name = name;
 	this.hand = [];
-}
- this.takeCard = function {
- 	this.hand.push(deck.dealRandom());
- 	return this;
- }
+	this.takeCard = function( deck ) {
+		//Take a card from a deck
+		var card = deck.dealRandom();
+		//and add it to player's hand
+		this.hand.push(card);
+	}
 
- this.discard = function (cardis) {
- 	if (this.hand.length > cardis) {
- 		this.hand.splice(cardis, 1);
- 	}
- 	return this;
- }
+	this.discard = function (cardis) {
+		if (this.hand.length > cardis) {
+			this.hand.splice(cardis, 1);
+		}
+		return this;
+	}
+}
