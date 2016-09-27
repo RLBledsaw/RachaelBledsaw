@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Survey Form </title>
+</head>
+
+<body>
+	<form action='/result' method = "post">
+		Your Name: <input type='text' name='name'>
+		Dojo Location: <select name='location'>
+			<option value='sanjose'> San Jose </option>
+			<option value='seattle'> Seattle </option>
+			<option value='dallas'> Dallas </option>
+			<option value='denver'> Denver </option>
+			<option value='washingtondc'> Washington D.C. </option>
+			</select>
+		Favorite Language: <select name='language'>
+			<option value = 'javascript'> Javascript </options>
+			<option value = 'ruby'> Ruby </options>
+			<option value = 'python'> Python </options>
+			<option value = 'scratch'> Scratch </options>
+			<option value = 'c++'> C++ </options>
+		</select>
+		Comment (optional): <textarea name = 'comment'></textarea>
+
+		<input type = 'submit' value = 'Submit Form'>
+	</form>
+</body>
+</html>
