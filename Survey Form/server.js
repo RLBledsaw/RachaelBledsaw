@@ -1,3 +1,13 @@
+/*
+Rachael -- Works just great, nice job. A few things:
+
+-- On your comment regarding attempting to re-direct: I love the idea. It's best practice not to render from a post method, so you're exactly right in trying to redirect the HTTP request. That probably means another route -- go ahead and refactor your code (the challenge being how to persist the form data!).
+
+-- Your gitignore.txt file actually HAS TO BE NAMED .gitignore for it to work (I've made that change)
+
+-- Your package.json file should be at the root level (I've made that change)
+*/
+
 var express = require('express'),
 	path = require('path'),
 	bodyParser = require('body-parser');
