@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+	<title> Button Game </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- tried to make bower work, but got a 404 error. Was likely my file path. When you have a moment, I'd like to set it up so you can point out where I misstep. -->
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	
+</head>
+<body>
+	<h1> The Button has been clicked <span id="count"></span> time(s)</h1>
+	<p> Push the button to increase the count</p>
+	<button id = 'epic'> Push the Epic Button </button>
+	<button id = 'reset'> Reset </button>
+
+	<script>
+		var socket = io.connect();
+		$('#epic').click(function(){
+			socket.emit('increase_clicked')
+		});
+
+		socket.on('count', function(data){
+			count = data.count;
+			$('#count').html(count);
+		});
+
+		$('#reset').click(function(){
+			socket.emit("reset_clicked")
+		});
+	</script>
+</body>
+</html>
