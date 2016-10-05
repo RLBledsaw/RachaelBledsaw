@@ -12,7 +12,13 @@ app.get('/', function(req, res){
 var server = app.listen(port, function(){
 	console.log("Hearing you on " + port);
 });
-//had trouble keeping track of the files, so moved it back to server. Should probably take some time to rework work flow for myself
+/*
+Would love to see you refactor this so that it's in another file! Here's a head start:
+*/
+var functionExportedFromSocketFile = require('./sockets');
+
+// What does the functionExportedFromSocketFile need?
+
 var io = require('socket.io').listen(server)
 var count = 0;
 io.sockets.on('connection', function(socket){
@@ -26,7 +32,5 @@ io.sockets.on('connection', function(socket){
 		io.emit('count', {count: count})
 	})
 })
-/* I understand the code when I read it and when I see others typing it, but I 
-struggle a lot when trying to put this together. I would appreciate any books,
-blogs, or pages (outside the documentation, please) that I can dig into to help me
-understand socket more. Belt or no, this would be a gold star to be able to claim on my cv */
+
+// Before I recommend resources, it's important to pinpoint where the gap in understanding is. Let's schedule a 1:1 session to talk this through.

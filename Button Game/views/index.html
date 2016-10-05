@@ -5,7 +5,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- tried to make bower work, but got a 404 error. Was likely my file path. When you have a moment, I'd like to set it up so you can point out where I misstep. -->
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
-	
+
 </head>
 <body>
 	<h1> The Button has been clicked <span id="count"></span> time(s)</h1>
@@ -14,6 +14,10 @@
 	<button id = 'reset'> Reset </button>
 
 	<script>
+		/* Rachael -- Good code here, although how does the client get the initial count of clicks?
+
+			I'd recommend adding some logic that grabs current count when page loads...
+		*/
 		var socket = io.connect();
 		$('#epic').click(function(){
 			socket.emit('increase_clicked')
