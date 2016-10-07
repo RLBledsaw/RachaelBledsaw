@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> QuotingDojo </title>
+</head>
+<body>
+	<h1> Welcome to Quoting Dojo! </h1>
+
+	<form action="/message" method="post">
+		name: <input type="text" value="name">
+		message: <textarea name="message" rows="4" cols="50"> </textarea>
+		<input type="Submit" value="Post my Message">
+	</form>
+
+	<% for (var post in posts) {%>
+		<h4> Name: <%= posts[post].name %> </h4>
+		<p> Message: <%= posts[post].message %> </p>
+
+			<%posts[post].comments.forEach(function(comment){ %>
+				<h5>Name: <%= comment.name %></h5>
+				<p> Message: <%= comment.comment %> </p>
+	<% }) %>
+
+	<form action="/comment/<%= posts[post]._id %>" method="post">
+		name: <input type="text" value="name">
+		comment: <textarea name="comment" rows="4" cols="40"></textarea>
+		<input type="Submit" value="Post my Comment">
+	</form>
+	<% } %>
+
+</body>
+</html>
