@@ -5,9 +5,11 @@
 </head>
 <body>
 	<h1> Welcome to Quoting Dojo! </h1>
+	<!-- Where are the errors displayed? -->
 
 	<form action="/message" method="post">
-		name: <input type="text" value="name">
+		<!-- Need a name attribute! -->
+		name: <input type="text" name="name">
 		message: <textarea name="message" rows="4" cols="50"> </textarea>
 		<input type="Submit" value="Post my Message">
 	</form>
@@ -16,13 +18,11 @@
 		<h4> Name: <%= posts[post].name %> </h4>
 		<p> Message: <%= posts[post].message %> </p>
 
-			<%posts[post].comments.forEach(function(comment){ %>
-				<h5>Name: <%= comment.name %></h5>
-				<p> Message: <%= comment.comment %> </p>
-	<% }) %>
+			<!-- forEach doesn't work in EJSl try to refactor! -->
 
 	<form action="/comment/<%= posts[post]._id %>" method="post">
-		name: <input type="text" value="name">
+		<!-- You need to have a name attribute -->
+		name: <input type="text" name="name">
 		comment: <textarea name="comment" rows="4" cols="40"></textarea>
 		<input type="Submit" value="Post my Comment">
 	</form>
