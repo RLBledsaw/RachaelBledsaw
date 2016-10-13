@@ -19,7 +19,7 @@ var Schema = mongoose.Schema;
 
 var PostSchema = new mongoose.Schema({
 	name: {type: String, required: true, minlength: 4},
-	message: {type: String, required: true}
+	message: {type: String, required: true}, // Missing a comma here...
 	comment: [{type: Schema.Types.ObjectId, ref: 'Comment'}]
 }, {timestamp: true});
 
@@ -55,10 +55,9 @@ app.post('/message', function(req, res){
 				errors.push("Don't you have something to say?");
 			}
 			console.log(errors);
-			res.render("index", {errors: errors});
-		} else {
-			res.redirect('/');
+			// res.render("index", {errors: errors}); Don't render from a post!
 		}
+		res.redirect('/');
 	})
 });
 
