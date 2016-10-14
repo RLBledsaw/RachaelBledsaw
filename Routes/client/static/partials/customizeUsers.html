@@ -1,0 +1,27 @@
+<div>
+	<form ng-submit="createUser()">
+		First Name: <input type='text' ng-model='newUser.fname'>
+		Last Name: <input type='text' ng-model='newUser.lname'>
+		Favorite Language: <input type='text' ng-model='newUser.favLang'>
+		<input type='submit' value='Add New User'>
+
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Favorite Language</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody ng-repeat="user in users">
+			<tr>
+				<td>{{user.fname}}</td>
+				<td>{{user.lname}}</td>
+				<td>{{user.favLang}}</td>
+				<td><button ng-click="deleteUser($index)">Delete User</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

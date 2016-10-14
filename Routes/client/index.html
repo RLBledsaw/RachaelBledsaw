@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title> Partials and Custom Users</title>
+	<script src='/angular/angular.js'></script>
+	<script src='/angular-route/angular-route.js'></script>
+	<script src='main.js'></script>
+	<script src="factories/userFactory.js"></script>
+	<script src="controllers/customizeUsers.js"></script>
+	<script src="controllers/userList.js"></script>
+</head>
+<body>
+	<div >
+		<a href="#/"> Customized Users</a> <a href="#/users">User List</a>
+
+		<div ng-views="">	
+		</div>
+	</div>
+</body>
+</html>
