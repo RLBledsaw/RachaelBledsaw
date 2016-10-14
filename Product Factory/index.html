@@ -22,10 +22,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat ="product in products">
-					<td> {{product.name}}</td> 
-					<td> {{product.price}}</td> 
-					<td> <button ng-click='deleteProduct(productOb)'> Delete</button></td>
+				<!-- Let's get the index so we can delete the right product -->
+				<tr ng-repeat ="(index, product) in products">
+					<td> {{product.name}}</td>
+					<td> {{product.price}}</td>
+					<td> <button ng-click='deleteProduct(index)'> Delete</button></td>
 				</tr>
 			</tbody>
 		</table>
