@@ -1,7 +1,6 @@
 var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider){
-	console.log("in routes");
 	$routeProvider
 		.when ('/', {
 			templateUrl: 'static/partials/customizeUsers.html',
@@ -15,4 +14,3 @@ app.config(function($routeProvider){
 			redirectTo: '/'
 		});
 })
-
