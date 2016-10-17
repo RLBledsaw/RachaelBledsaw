@@ -17,11 +17,14 @@ app.factory("PlayerFactory", function(){
 	factory.getPlayers = function(callback){
 		callback(players);
 	}
-	factory.removePlayer = function(id){
-		$scope.players = $scope.players.filter(function(player){
-			if(player.id === id) {return false;}
-			else{return true;}
+	factory.removePlayer = function(id, cb){
+		// There is no $scope object in the factory
+		players = players.filter(function(player){
+			if(player.id === id) { return false; }
+			else { return true; }
 		});
+		// Use the callback passed from controller to give the updated players array back...
+		cb(players);
 	}
 
 	factory.addPlayerToTeam = function(data) {

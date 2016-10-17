@@ -16,7 +16,10 @@ app.controller('PlayersController', function($scope, PlayerFactory){
 	}
 
 	$scope.deletePlayer = function(id){
-		PlayerFactory.removePlayer(id);
-		
+		PlayerFactory.removePlayer(id, function(players){
+			// Reset players
+			$scope.players = players;
+		});
+
 	}
 })
