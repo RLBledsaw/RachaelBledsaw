@@ -1,0 +1,21 @@
+{
+  "name": "teamsplayers",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "meadch <meadch@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/CodingDojoOnline-MEAN-2/RachaelBledsaw",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
