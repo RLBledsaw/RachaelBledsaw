@@ -1,0 +1,39 @@
+<div class="main_container-fluid">
+	<div class="left_block">
+		<h1>Product List:</h1>
+		<label>Search Products: <br />
+		<input ng-model="searchText"></label>
+		<table id='searchTextResults'>
+			<tr><th>Product Name</th></tr>
+			<tr ng-repeat='product in products | filter: searchText'>
+				<td><a href="#/products/{{product._id}}"></a> {{product.name}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="right_block">
+		<h3><a href="#/products">See All Products</a></h3>
+			<h3>Product List:</h3>
+			<div class="col-xs-4 col-xs-3">
+				<div class="thumbnail">
+					<div class="caption" ng-repeat='product in products | filter: searchText'>
+						<img ng-src="{{product.url}}" ng-cropper ng-cropper-show="showEvent" width="100" height="150" alt="{{product.name}}">
+						<h3>Product Name: {{product.name}}</h3>
+						<h3>Quantity Left: {{product.quantity}}</h3>
+						<h4>Description: {{product.description}}</h4>
+						<p><a href="#/products/{{product._id}}" class="btn btn-primary" role='button'></a>Select</p>
+						<p>...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="orders">
+			<h2>New Customers</h2>
+			<ul ng-repeat='customer in customers'>
+				<li><h4>{{customer.name}}joined the store on {{customer.createdAt | date: short}}</h4></li>
+			</ul>
+			<h2>New Orders</h2>
+				<ul ng-repeat='order in orders'>
+				<li><h4>{{order._customer.name}}ordered {{order._product.name}} on {{order.createdAt | date: short}}</h4></li>
+			</ul>
+		</div>
+	</div>

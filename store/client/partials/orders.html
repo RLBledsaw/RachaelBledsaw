@@ -1,0 +1,42 @@
+<h2>Order</h2>
+<div class="order_form">
+	<form>
+		<select ng-model='newOrder._customer'>
+      		<option ng-repeat='customer in customers' value={{customer._id}} ng-bind='customer.name'></option>
+    	</select>
+    	Order: <select ng-model="newOrder.quantity">
+      		<option value="1">1</option>
+      		<option value="5">5</option>
+      		<option value="10">10</option>
+      		<option value="20">20</option>
+    	</select><br />
+    	<select ng-model='newOrder._product'>
+      		<option ng-repeat='product in products' value={{product._id}} ng-bind='product.name'></option>
+    	</select>
+	<input type="submit" ng-click="createOrder()" value="Add Order" />
+		
+	</form>
+</div>
+<div class="order_list">
+	<table class="table table-stripped">
+		<thead>
+			<tr>
+				<th>Customer Name</th>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<div id="orderList"
+		<tbody ng-repeat='order in orders'>
+			<tr>
+				<td>{{order._customer.name}}</td>
+				<td>{{order._product.name}}</td>
+				<td>{{order.quantity}}</td>
+				<td>{{order.createdAt | date: short}}</td>
+				<td ng-click='deleteOrder(order._id)'><button>Cancel Order</button></td>
+			</tr>
+		</tbody>
+		</div>
+	</table>
+</div>

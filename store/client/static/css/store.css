@@ -1,0 +1,27 @@
+* {
+margin-left: 10px;
+}
+.main_container-fluid {
+  display: inline-block;
+  border: 1px grey;
+}
+.left_block {
+  display: inline-block;
+}
+.right_block {
+  display: inline-block;
+  width: 800px;
+}
+.thumbnail {
+  display: inline-block;
+}
+.product_form {
+  display: inline-block;
+}
+.searchProducts {
+  border: 1px blue;
+}
+.orders {
+  display: inline-block;
+  width: auto;
+}
