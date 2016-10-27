@@ -15,7 +15,7 @@ App.controller('OrderController', function($scope, CustomerFactory, ProductFacto
 	function getAllProducts(){
 	ProductFactory.getProducts()
 	.then(function(serverResponse){
-		$scope.customers = serverResponse.data;
+		$scope.products = serverResponse.data;
 		})
 	}
 	
