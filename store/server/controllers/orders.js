@@ -37,7 +37,7 @@ module.exports = {
 			} else {
 				var quantityOrdered = parseInt(order.quantity)
 				productID = order._product
-				Product.returnQuality(quantityOrdered, productID, function(result){
+				Product.returnQuantity(quantityOrdered, productID, function(result){
 					console.log(result);
 					if (result){
 						Order.remove(order, function(err, order){

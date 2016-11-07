@@ -1,6 +1,6 @@
 <div class="main_container-fluid">
 	<div class="left_block">
-		<h1>Product List:</h1>
+		<h3>Product List:</h3>
 		<label>Search Products: <br />
 		<input ng-model="searchText"></label>
 		<table id='searchTextResults'>
@@ -12,16 +12,14 @@
 	</div>
 	<div class="right_block">
 		<h3><a href="#/products">See All Products</a></h3>
-			<h3>Product List:</h3>
-			<div class="col-xs-4 col-xs-3">
+			<div class="col-xs-5 col-xs-4">
 				<div class="thumbnail">
 					<div class="caption" ng-repeat='product in products | filter: searchText'>
-						<img ng-src="{{product.url}}" ng-cropper ng-cropper-show="showEvent" width="100" height="150" alt="{{product.name}}">
-						<h3>Product Name: {{product.name}}</h3>
-						<h3>Quantity Left: {{product.quantity}}</h3>
-						<h4>Description: {{product.description}}</h4>
+						<img ng-src="{{product.url}}" ng-cropper ng-cropper-show="showEvent" width="150" height="150" alt="{{product.name}}">
+						<h4>Product Name: {{product.name}}</h4>
+						<h5>Quantity Left: {{product.quantity}}</h5>
+						<p>Description: {{product.description}}</p>
 						<p><a href="#/products/{{product._id}}" class="btn btn-primary" role='button'></a>Select</p>
-						<p>...</p>
 					</div>
 				</div>
 			</div>
@@ -29,7 +27,7 @@
 		<div class="orders">
 			<h2>New Customers</h2>
 			<ul ng-repeat='customer in customers'>
-				<li><h4>{{customer.name}}joined the store on {{customer.createdAt | date: short}}</h4></li>
+				<li><h4>{{customer.name}} joined the store on {{customer.createdAt | date: short}}</h4></li>
 			</ul>
 			<h2>New Orders</h2>
 				<ul ng-repeat='order in orders'>

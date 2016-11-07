@@ -27,9 +27,9 @@
 				<th>Date</th>
 			</tr>
 		</thead>
-		<div id="orderList"
+		<div id="orderList">
 		<tbody ng-repeat='order in orders'>
-			<tr>
+			<tr ng-repeat='order in orders'>
 				<td>{{order._customer.name}}</td>
 				<td>{{order._product.name}}</td>
 				<td>{{order.quantity}}</td>

@@ -1,25 +1,69 @@
 * {
-margin-left: 10px;
+margin: 5px;
 }
+body{
+  font-family: 'Bookman Old Style', Bookman, 'URW Bookman L', 'Palatino Linotype', serif;
+  font-size: 1.3em ;
+  font-style: normal;
+  font-weight: bold;
+  font-variant: normal;
+  color: black;
+  background: url(background2.jpg) fixed;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+header{
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  background: url(wings.png) no-repeat center;
+  color: #FFDEAD;
+}
+
+a, a:link {color: #900; background: transparent; text-decoration: none;}
+a:visited {color: #933; background: transparent}
+a:hover {color: #966; background: transparent}
+a:active {color: #988; background: transparent}
+
 .main_container-fluid {
   display: inline-block;
-  border: 1px grey;
+  border: 1px red;
 }
+.page-wrapper{
+  position: relative;
+  margin: 10px auto;
+  width: 1000px;
+  padding: 5px;
+  background: #4e0000;
+}
+.navbar li{
+  display: inline-block;
+  text-align: center;
+}
+
 .left_block {
   display: inline-block;
 }
 .right_block {
   display: inline-block;
-  width: 800px;
+  width: 700px;
 }
 .thumbnail {
   display: inline-block;
 }
 .product_form {
+  display: block;
+  width: 1000px;
+}
+.col-xs-7{
   display: inline-block;
+  width: 500px; 
 }
 .searchProducts {
-  border: 1px blue;
+  border: 1px #4e0000;
 }
 .orders {
   display: inline-block;

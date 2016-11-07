@@ -2,8 +2,8 @@
 <html ng-app="StoreModule">
 <head>
 	<title>Mini-Mean store</title>
-	<link rel="stylesheet" type="text/css" href="static/css/store.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/css/store.css">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="angular/angular.js"></script>
 	<script src="angular-route/angular-route.js"></script>
@@ -18,16 +18,20 @@
 	<script src="controllers/showCtrl.js"></script>
 </head>
 <body>
-	<h1>Ravyn's Armory </h1>
-	<p>The one stop online shop for all your supernatural defense needs</p>
-	<nav>
-		<ul>
-			<li role="presentation" class="active"><a href="#/">Home</a></li>
-			<li role="presentation"><a href="#/products">Products</a></li>
-			<li role="presentation"><a href="#/customers">Customers</a></li>
-			<li role="presentation"><a href="#/orders">Orders</a></li>
-		</ul>
-	</nav>
+	<div class="page-wrapper">
+		<header>
+		<h1> Ravyn's Armory </h1>
+		<h2>The one stop online shop for all your supernatural defense needs</h2>
+		<nav class="navbar">
+			<ul>
+				<li role="presentation" class="active"><a href="#/">Home</a></li>
+				<li role="presentation"><a href="#/products">Products</a></li>
+				<li role="presentation"><a href="#/customers">Customers</a></li>
+				<li role="presentation"><a href="#/orders">Orders</a></li>
+			</ul>
+		</nav>
+		</header>
 	<div ng-view></div>
+	</div>
 </body>
 </html>
