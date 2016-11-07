@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="mdmapp">
+<head>
+    <title> Mad Dog Muscle </title>
+    <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="static/maddogstyle.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div>
+    <div id='welcome'>
+<h1> <span class='firstLetter'>W</span>elcome to <span class='firstLetter'>M</span>ad <span class='firstLetter'>D</span>og <span class='firstLetter'>M</span>uscle </h1>
+    </div>   <br>
+    <img id="facepic" src="static/welcomeA.PNG" style="float:right"/>
+<div id="location">
+    <p> 1086 Leo Place, Aurora IL 60504 1-555-867-5309 Monday-Friday: 8am-8pm Saturday: 10am - 6pm Sunday: closed</p>
+</div>
+<p> Mad Dog Muscle -- founded by trainer Alicia Covelli -- focuses on YOUR goals. Between classes and personal sessions, we help you create a regime that is not only fun, but is made to last. Sound nuts? Well, now you know why we're called Mad Dog.</p>
+<!--<a href="#/realstory">The Real Story</a> -->
+<p> Alicia trained as not only a personal trainer, but also as a nutritionist. An early devotee of Cross Fit, Alicia specializes in creative circuts centered around body weight. That means limited use of expensive, complicated, machines making the transition to a healthy lifestyle much much easier.</p>
+    
+<p> If you prefer to work one-on-one with your trainer, contact us for private sessions. But if you're looking for a fun, energetic, group experiance -- check out our class options!</p>
+    <h2><u>Classes</u></h2>
+        <ul>
+            <li><a href="#/zprep">Zombie Apoco-prep</a></li>
+            <li><a href="#/momandme">Mommy and Me</a></li>
+            <li><a href="#/abtime">Ab-venture Time</a></li>
+            <li><a href="#/stem">S.T.E.M</a></li>
+            <li><a href="#/superhero">Super Power Hour</a></li>
+        </ul>
+    <h2> <u><a href="#/psession">Private Sessions</a></u></h2>
+    </div>
+    <div ng-view></div>        
+            
+    <footer> Copyright 2016 | Mad Dog Muscle</footer>
+</body>
+</html>

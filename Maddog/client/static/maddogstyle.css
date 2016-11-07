@@ -1,0 +1,150 @@
+    body{ 
+            background-color: black;
+            color: floralwhite;
+        }
+        div{
+            position: relative;
+            border: 5px solid #5f5f5f;
+            margin: 0 auto;
+            text-align: left;
+            width: 1250px;
+            background: rgb(191,47,27); /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left,rgba(240,141,60,0),rgba(191,47,27,1)); /*Safari 5.1-6*/
+            background: -o-linear-gradient(right,rgba(240,141,60,0),rgba(191,47,27,1)); /*Opera 11.1-12*/
+            background: -moz-linear-gradient(right,rgba(240,141,60,0),rgba(191,47,27,1)); /*Fx 3.6-15*/
+            background: linear-gradient(to right, rgba(240,141,60,0), rgba(191,47,27,1)); /*Standard*/
+            font-family: 'Allerta Stencil', sans-serif;
+        }
+        h1{
+            margin: 0px;
+            text-align:center;
+            font-size: 400%;
+        }
+        u {
+            text-decoration: none;
+            border-bottom: 10px solid #5F5F5F;
+        }
+        footer{
+            text-align: center;
+        }
+        .first {
+            list-style-image: url(wliimage.png);
+        }
+        #welcome {
+            height: 300px;
+            width: 800px;
+            border: none;
+            background: none;
+        
+        }
+        .firstLetter {
+            font-size: 200%;
+        }
+        #facepic {
+            height: 400px;
+            width: 275px;
+        }
+        #location {
+            height: 65px;
+            width: 400px;
+            text-align: center;
+            border: none;
+            background-color: black;
+            background-image: none;
+        }
+/*
+        div.img {
+            border: 1px solid #5f5f5f;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        div.img:hover {
+            border: 1px solid #777;
+        }
+
+        div.img img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin:auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom{
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.1)}
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
