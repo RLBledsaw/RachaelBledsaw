@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ninja to Cat </title>
+	<link rel="stylesheet" type="text/css" href="NinjaCat.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('img').click(function() {
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+			});
+			var sourceSwap = function () {
+    		var $this = $(this);
+    		var newSource = $this.data('alt-src');
+    		$this.data('alt-src', $this.attr('src'));
+    		$this.attr('src', newSource);
+}
+			
+			$(function() {
+    		$('img[data-alt-src]').each(function() { 
+        	new Image().src = $(this).data('alt-src'); 
+    		}).click(sourceSwap, sourceSwap); 
+	});
+		});
+	</script>
+</head>
+<body>
+	<h1> Ninja to Cat </h1>
+	<p> Click on the images and watch the ninja turn into a cat!</p>
+	<div>
+	<img src='ninja0.png' data-alt-src='cat0.png'>
+	<img src='ninja1.png' data-alt-src='cat1.png'>
+	<img src='ninja2.png' data-alt-src='cat2.png'>
+	<img src='ninja3.png' data-alt-src='cat3.png'>
+	<img src='ninja4.png' data-alt-src='cat4.png'>
+	</div>
+</body>
+</html>

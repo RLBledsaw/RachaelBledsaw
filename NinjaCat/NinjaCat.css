@@ -1,0 +1,17 @@
+body {
+	width: 970px;
+	background-color: black;
+	color: white;
+
+}
+img {
+	display: inline-block;
+	vertical-align: top;
+	border: 2px solid white;
+	padding: 3px;
+	margin: 3px;
+}
+div {
+	width: 200px;
+	height: 350px;
+}
