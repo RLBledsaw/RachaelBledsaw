@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sortable Ninja </title>
+	<link rel="stylesheet" type="text/css" href="Sortableninja.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#ninja').sortable();
+			$('#ninja').disableSelection();
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1> Ninja Out of Sorts!</h1>
+		<p> Practice really confused this poor ninja, help put him back together!</p>
+	<ul id="ninja">
+		<li> <img src="sort1.png"></li>
+		<li> <img src="sort2.png"></li>
+		<li> <img src="sort3.png"></li>
+		<li> <img src="sort4.png"></li>
+		<li> <img src="sort5.png"></li>
+	</ul>
+	</div>
+</body>
+</html>

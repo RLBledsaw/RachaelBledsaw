@@ -1,0 +1,25 @@
+div {
+	width: 900px;
+	height: 900px;
+	background-color: black;
+	position: relative;
+	color: white;
+}
+ul{
+	list-style-type: none;
+	position: relative;
+	padding-left: 250px;
+	padding-top: 100px;
+
+}
+img {
+	border: 2px solid white;
+}
+h1 {
+	text-align: center;
+	padding-top: 20px;
+}
+p {
+	text-align: center;
+	padding-top: 20px;
+}
