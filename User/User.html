@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<!-- a simple add user page that displays the added user on a table above the form. No database is used, so information is lost on reset. This is the same reason a reset button is used over having the form clear on submit. -->
+<head>
+	<title> Add a New User </title>
+	<link rel="stylesheet" type="text/css" href="User.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="user.js"></script>
+</head>
+<body>
+	<table>
+		<thead>
+			<th> First Name </th>
+			<th> Last Name </th>
+			<th> Email Address </th>
+			<th> Contact # </th>
+		</thead>
+		<tbody>
+			<tr>
+
+			</tr>
+		</tbody>
+	</table>
+	<h1> Add User</h1>
+	<form id="newuserform">
+		<label>
+		First Name:<input type="text" name="firstname" placeholder="First Name" id="first_name">
+		</label>
+		<label>
+		Last Name:<input type="text" name="lastname" placeholder="Last Name" id="last_name">
+		</label>
+		<label>
+		Email Address:<input type="text" name="email" placeholder="Email Address" id="email">
+		</label>
+		<label>
+		Contact No.:<input type="text" name="contact" placeholder="Phone #" id="contact">
+		</label>
+		<input type="submit" value="Add User" id="submit">
+		<input type="reset" value="Reset" id="formreset">
+	</form>
+</body>
+</html>
