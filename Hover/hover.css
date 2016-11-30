@@ -1,0 +1,15 @@
+body {
+	width: 915px;
+	padding: 10px;
+	margin: 10px;
+	background-color: black;
+	color: white;
+}
+img {
+	width: 300px;
+	height: 455px;
+	border: 2px solid grey;
+	display: inline-block;
+	vertical-align: top;
+	margin: 2px;
+}
