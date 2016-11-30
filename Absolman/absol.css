@@ -1,0 +1,46 @@
+body{
+			background-color: green;
+			margin: 0px;
+		}
+		div.row div {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+		}
+
+		div.rock{
+        	background: url('rock.png');
+    	}
+
+		div.puff{
+        	background: url('coin.png');
+        	background-repeat: no-repeat;
+        	background-position: center;	
+    	}
+    	div.cherry{
+    		background: url('cherry.png');
+    		background-repeat: no-repeat;
+    		background-position: center;
+    	}
+
+		div#absol{
+        	background: url('Absol.gif');
+        	background-repeat: no-repeat;
+        	background-position: center;
+        	background-size: cover;
+        	width: 45px;
+        	height: 45px;
+        	position: absolute;
+    	}
+
+		 div.empty{
+
+    	}
+    	div#score {
+    		border: 1px solid white;
+    		width: 35px;
+    		height: 20px;
+    		text-align: center;
+    	}
+
+	</style>
