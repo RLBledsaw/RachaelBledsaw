@@ -1,0 +1,19 @@
+<h1>Home</h1>
+
+<a href="#/new">Add friend</a>
+
+<table>
+	<thead>
+		<th>
+			<td> Name </td>
+		</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat = 'friend in friends'>
+			<td><a href="#/{{friend._id}}">{{friend.firstName}} {{friend.lastName}}</a>
+			<button ng-click="deleteFriend(friend._id)">Delete</button>
+			<a href="#/{{friend._id}}/edit">Edit</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
